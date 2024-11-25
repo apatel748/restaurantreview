@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/restaurants">Best Restaurants</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Displays the best resturants based on 4 or 5 star reviews-->
+  <main>
+    <h1>Best Restaurants</h1>
+    <% if (reviews && reviews.length > 0) { %> <!--Searches for reviews in the database-->
+      <ul>
+        <% reviews.forEach(function (review) { %> <!-- Looks at each individual review in the database-->
+          <li>
+            <strong><%= review.restaurant %></strong> - <%= review.rating %> stars<br> <!-- After 4-5 star resturant is found, it retrieves the fields for the review and displays it-->
+            <em>Reviewed by <%= review.name %> on <%= review.date.toDateString() %></em><br>
+            <p><%= review.comment %></p>
+          </li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No reviews with 4 or 5 stars!</p>
+    <% } %>
+  </main>
+</body>
+</html>
+
