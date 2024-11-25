@@ -1,0 +1,148 @@
+/* Main body UI code*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  color: #000000;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #0065ca;
+}
+
+/* Navigation buttons ui*/
+a {
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Creates header UI */
+header {
+  background-color: #c6e9ff;
+  padding: 15px;
+  border-bottom: 5px solid #182e40;
+}
+
+/*Makes the framework for the header*/
+header nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #003366;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+  color: #4486bc;
+}
+
+/*Main content UI*/
+main {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 4px 8px #001e3e;
+}
+
+/* Styles the attributes of main content*/
+main p {
+  font-size: 18px;
+  color: #4d4d4d;
+}
+
+main a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0079fa;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 4px #222222;
+}
+
+main a:hover {
+  background-color: #002e5c;
+  box-shadow: 4px 6px #222222;
+}
+
+/* Styles the help form */
+form {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 4px 8px #222222;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+/*Styles the attribute of the form */
+form label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+}
+
+form button {
+  background-color: #1988ff;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #002a53;
+}
+
+/* Styles the delete button */
+.delete-btn {
+  color: white;
+  background-color: #ff4500;
+  padding: 7px 12px;
+  border-color: black;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  background-color: #510000;
+}
+
+/* Styles the edit button */
+.edit-btn {
+  color: white;
+  background-color: #00ff00;
+  padding: 7px 12px;
+  border-color: black;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.edit-btn:hover {
+  background-color: #004d00;
+}
