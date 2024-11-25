@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/restaurants">Best Restaurants</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Shows all reviews created by all users in a list format-->
+  <main>
+    <h1>All Reviews</h1>
+    <a href="/reviews/add">Add a New Review</a>
+    <ul>
+        <% reviews.forEach(function (review) { %> <!-- get each individula review from review database as function-->
+          <li>
+            <strong><%= review.restaurant %></strong> - <%= review.rating %> star s<br> <!--With each review, it gets the fields from the database -->
+            <em>Reviewed by <%= review.name %> on <%= review.date.toDateString() %></em><br>
+            <p><%= review.comment %></p>
+            <a href="/reviews/edit/<%= review._id %>" class="edit-btn">Edit</a> <!-- Edit and delete buttons for each review-->
+            <a href="/reviews/delete/<%= review._id %>" class="delete-btn">Delete</a>
+          </li>
+        <% }); %>
+      </ul>      
+  </main>
+</body>
+</html>
