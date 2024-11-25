@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/restaurants">Best Restaurants</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Help contact form structure -->
+  <main>
+    <h1>Contact Us</h1>
+    <p>For any help, please fill out the form below!</p>
+    <form action="/help" method="POST">
+      <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
